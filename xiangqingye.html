@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/forever.css">
+    <style>
+        #d1,#d2,#d3{
+            width: 20px;
+            height: 20px;
+            background-image: url(img02.hua.com/pc/pimg/home/common_sprite.png);
+            background-size: 7000%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #d1{background-position: 5px -23px;}
+        #d2{background-position: -23px -23px;}
+        #d3{background-position: -49px -23px;}
+        
+        .detail-r-d0-d1 div{
+            opacity: 0;
+        }
+        .detail-r-d0-d1 div.displayInline{
+            opacity: 1;
+            transition: opacity 0.5s linear;
+            position: absolute;
+            top: 0px;
+        }
+        .det-r-d2-d1-p1{
+            background-position: -852px -136px;
+        }
+        .det-r-d2-d1-p11{
+            background-position:0 -136px !important;
+        }
+
+        .det-r-d2-d1-p2{
+            background-position:-1052px -136px;
+        }
+        .det-r-d2-d1-p22{
+            background-position:-200px -136px !important;
+        }
+
+        .det-r-d2-d1-p3{
+            background-position: -1102px -136px;
+        }
+        .det-r-d2-d1-p33{
+            background-position: -250px -136px !important;
+        }
+
+        .det-r-d2-d1-p4{
+            background-position: -952px -136px;
+        }
+        .det-r-d2-d1-p44{
+            background-position:-100px -136px !important;
+        }
+
+        .det-r-d2-d1-p5{
+            background-position:-902px -136px;
+        }
+        .det-r-d2-d1-p55{
+            background-position:-50px -136px !important;
+        }
+
+        .det-r-d2-d1-p6{
+            background-position: -1002px -136px;
+        }
+        .det-r-d2-d1-p66{
+            background-position: -150px -136px !important;
+        }
+        #toTop,#toTop2{
+            display:none;
+            position: fixed;
+            top: 0;
+            background-color: #fff;
+            width: 948px;
+            height: 52px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="top-nav-warpper">
+            <ul class="top-nav-l">
+                <li class="menu">
+                    <a href="#">
+                        <span id="d1"></span>
+                        收藏鲜花网(hua.com)
+                    </a>
+                </li>
+                <li class="menu">
+                    <a href="#">
+                        <span id="d2"></span>
+                        关注微信
+                    </a>
+                    <div class="hidden">
+                        <img src="./img02.hua.com/pc/pimg/home/wxguanjia_qrcode.png" >
+                        <p>
+                            扫码关注
+                        </p>
+                        <p>
+                            回复“礼物”更多惊喜
+                        </p>
+                    </div>
+                </li>
+                <li class="menu">
+                    <a href="#">
+                        <span id="d3"></span>
+                        花礼网app
+                    </a>
+                    <div class="hidden2">
+                        <img src="./img02.hua.com/pc/pimg/home/app_download_qrcode.png" >
+                        <p>
+                            新人专享100礼包
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="top-nav-r">
+                <li class="menu">
+                   <span style="display: inline-block;margin-left: 5px;">
+                    中国鲜花礼品网:中国鲜花网领先品牌</span> 
+                </li>
+                <li class="menu1">
+                    <a href="#" class="mena">
+                        购物车<span style="color: orangered;">(0)</span>
+                    </a>
+                </li>
+                <li class="menu1">
+                    <a href="#" class="mena">客户服务</a>
+                </li>
+                <li class="menu1">
+                    <a href="#" class="mena">订单查询</a>
+                </li>
+                <li class="menu1">
+                    <a href="#" id="btn-login">您好，请登录</a>
+                    <a href="#" id="btn-reg">注册</a>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#" class="logo-nav"></a>
+            </div>
+            <div class="search-box">
+                <div class="search-box-group">
+                    <div class="search-box-icon">
+                        <span class="icon"></span>
+                    </div>
+                    <input type="text" placeholder="商品搜索" class="search-box-input">
+                    <span class="search-box-btn">
+                        <button class="search-btn">搜索</button>
+                    </span>
+                </div>
+                <div class="search-box-hotwords">
+                    <a href="#">红玫瑰</a>
+                    <a href="#">永生卡</a>
+                    <a href="#">生日鲜花</a>
+                    <a href="#">礼品卡</a>
+                </div>
+            </div>
+            <div class="quiry" style="margin-top: -60px;">
+                <div class="quiry-phone">
+                    <span class="quiry-icon1"></span>
+                    <b>400-889-8188</b>
+                </div>
+                <div class="quiry-service">
+                    <a href="#" class="service-hover">
+                        <span class="quiry-icon2"></span>
+                        在线客服
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航.second -->
+    <div class="second-nav">
+        <div class="second-nav-d1">
+            <div class="second-classify">
+                <span >
+                    <span></span>
+                    <a href="#">所有分类</a>
+                </span>
+            </div>
+            <ul class="second-nav-ul">
+                <li>
+                    <a href="#">鲜花</a>
+                </li>
+                <li>
+                    <a href="#">永生花</a>
+                </li>
+                <li>
+                    <a href="#">蛋糕</a>
+                </li>
+                <li>
+                    <a href="#">礼品</a>
+                </li>
+                <li>
+                    <a href="#">巧克力</a>
+                </li>
+                <li>
+                    <a href="#">花语大全</a>
+                </li>
+                <li>
+                    <a href="#">企业团购</a>
+                </li>
+                <li>
+                    <a href="#">设计师臻选鲜花</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="crumb">
+        <div class="CSbar">
+            <a href="#">首页</a> >
+            <a href="#">鲜花</a> >
+            <span>恋恋情深</span>
+        </div>
+    </div>
+
+    <!-- 商品 -->
+    <div class="product-intro">
+        <div class="product-l">
+            <div class="pro-l-top">
+                <a href="#">
+                    <img src="./img01.hua.com/uploadpic/newpic/9012243.jpg" >
+                </a>
+            </div>
+            <div class="pro-l-bot">
+                <div class="pro-l-item">
+                    <a href="#">
+                        <img src="./img01.hua.com/uploadpic/newpic/9012243.jpg" alt="">
+                    </a>
+                </div>
+                <div class="pro-l-item">
+                    <a href="#">
+                        <img src="./img01.hua.com/uploadpic/newpic/202006021700571876.jpg" alt="">
+                    </a>
+                </div>
+                <div class="pro-l-item">
+                    <a href="#">
+                        <img src="./img01.hua.com/uploadpic/newpic/202006021701052867.jpg" alt="">
+                    </a>
+                </div>
+                <div class="pro-l-item">
+                    <a href="#">
+                        <img src="./img01.hua.com/uploadpic/newpic/201710241620045195.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="product-r">
+            <div class="pro-r-d1">
+                <p>恋恋情深</p>
+                <p>11枝香槟玫瑰，白色多头百合2枝</p>
+                <p>经典款式 简约设计</p>
+            </div>
+            <div class="pro-r-d2">
+                <div class="pro-r-d2-d1">
+                    <span>售价</span>
+                    <div class="pro-r-d2-d1-d1">
+                        ￥
+                        <span>198</span> 
+                        <span>
+                            市场价￥255
+                        </span>
+                    </div>
+                    <div class="pro-r-d2-d1-d2">
+                        已售
+                        <span>7.9万</span>
+                        件
+                    </div>
+                </div>
+                <div class="pro-r-d2-d2">
+                    <div class="pro-r-d2-d2-d1">
+                        APP/微信专享价
+                        <span>￥194</span>
+                    </div>
+                    <div class="pro-r-d2-d2-d2">
+                        <a href="#" style="color: #333;">
+                            去APP购买
+                            <span></span>
+                        </a>
+                        <div class="pro-r-APP">
+                            <img src="./img02.hua.com/pc/pimg/home/app_download_qrcode.png" >
+                            <p>
+                                新人专享100礼包
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pro-r-d2-d2-d3">
+                        <a href="#" style="color: #333;">
+                            去微信收钱
+                            <span></span>
+                        </a>
+                        <div class="pro-r-WX">
+                            <img src="https://m.hua.com/wxapi/tempqrpic?pid=9012243&userid=&type=1&sj=2020-8-19&sign=eaa0ee0e0ba19175" >
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-r-d2-d3"></div>
+            </div>
+            <div class="pro-r-d3">
+                <div class="pro-r-d3-d1">
+                    <span>花语</span>
+                    <p>
+                        喜欢像是一阵风，而爱你是细水长流
+                    </p>
+                </div>
+                <div class="pro-r-d3-d2">
+                    <span>材料</span>
+                    <p>11枝香槟玫瑰，多头白百合2枝，栀子叶8枝</p>
+                </div>
+            </div>
+            <div class="pro-r-d3-d2" style="margin-top: 10px;">
+                <span style="width: 75px;margin-right: 5px;">配送说明</span>
+                <p >全国</p>
+            </div>
+            <div class="pro-r-d3-d2" style="margin-top: 10px;">
+                <span style="width: 62px;margin-right: 20px;">配送至</span>
+                <div class="pro-r-d3-d2-div">
+                    <a href="#">
+                        <p>请选择</p>
+                        <span></span>
+                    </a>
+                    <div class="pro-r-d3-d2-div-div">
+                        <ul style="list-style: none;">
+                            <li>
+                                <a href="#">请选择</a>
+                            </li>
+                        </ul>
+                        <div class="pro-r-d3-d2-div-div-div">
+                            <ul>
+                                <li>
+                                    <a href="#">北京</a>
+                                </li>
+                                <li>
+                                    <a href="#">上海</a>
+                                </li>
+                                <li>
+                                    <a href="#">广东</a>
+                                </li>
+                                <li>
+                                    <a href="#">江苏</a>
+                                </li>
+                                <li>
+                                    <a href="#">浙江</a>
+                                </li>
+                                <li>
+                                    <a href="#">四川</a>
+                                </li>
+                                <li>
+                                    <a href="#">山东</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖北</a>
+                                </li>
+                                <li>
+                                    <a href="#">湖南</a>
+                                </li>
+                                <li>
+                                    <a href="#">福建</a>
+                                </li>
+                                <li>
+                                    <a href="#">陕西</a>
+                                </li>
+                                <li>
+                                    <a href="#">河南</a>
+                                </li>
+                                <li>
+                                    <a href="#">河北</a>
+                                </li>
+                                <li>
+                                    <a href="#">重庆</a>
+                                </li>
+                                <li>
+                                    <a href="#">辽宁</a>
+                                </li>
+                                <li>
+                                    <a href="#">安徽</a>
+                                </li>
+                                <li>
+                                    <a href="#">天津</a>
+                                </li>
+                                <li>
+                                    <a href="#">江西</a>
+                                </li>
+                                <li>
+                                    <a href="#">黑龙江</a>
+                                </li>
+                                <li>
+                                    <a href="#">山西</a>
+                                </li>
+                                <li>
+                                    <a href="#">澳门</a>
+                                </li>
+                                <li>
+                                    <a href="#">贵州</a>
+                                </li>
+                                <li>
+                                    <a href="#">广西</a>
+                                </li>
+                                <li>
+                                    <a href="#">云南</a>
+                                </li>
+                                <li>
+                                    <a href="#">新疆</a>
+                                </li>
+                                <li>
+                                    <a href="#">吉林</a>
+                                </li>
+                                <li>
+                                    <a href="#">甘肃</a>
+                                </li>
+                                <li>
+                                    <a href="#">内蒙古</a>
+                                </li>
+                                <li>
+                                    <a href="#">海南</a>
+                                </li>
+                                <li>
+                                    <a href="#">宁夏</a>
+                                </li>
+                                <li>
+                                    <a href="#">青海</a>
+                                </li>
+                                <li>
+                                    <a href="#">西藏</a>
+                                </li>
+                                <li>
+                                    <a href="#">香港</a>
+                                </li>
+                                <li>
+                                    <a href="#">台湾</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 加入购物车，立即购买 -->
+            <div class="pro-r-d4" style="margin-top: 100px;">
+                <a href="#">
+                    <div class="pro-r-d4-d1">
+                        <span></span>
+                        <h2>加入购物车</h2>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pro-r-d4-d2">
+                        <h2>立即购买</h2>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pro-r-d4-d3">
+                        <span></span>
+                        <p>
+                            收藏商品
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 商品end -->
+
+    <!-- 商品详情 -->
+    <div class="product-detail">
+        <div class="detail-l">
+            <div class="detail-l-top">
+                <div class="detail-l-top-text">
+                    <span>浏览记录</span>
+                </div>
+                <a href="#">
+                    <div class="detail-l-top-recode">
+                        <img src="https://img01.hua.com/uploadpic/newpic/1073186.jpg_80x87.jpg" >
+                    </div>
+                    <div class="detail-l-top-text2">
+                        <a href="#">
+                            <p>我如此爱你-口红款520—Dior#520口红(专柜正品)＋进口永生玫瑰礼盒</p>
+                            <p>¥598</p>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <div class="detail-l-bottom">
+                <div class="detail-l-top-text">
+                    <span>热销推荐</span>
+                </div>
+                <div class="detail-l-bottom-inner">
+                    <ul style="list-style:none;">
+                        <li class="det-inner-li">
+                            <a href="#">
+                                <div class="det-inner-li-div">
+                                    <div class="det-inner-li-div-d1">
+                                        <img src="./img01.hua.com/uploadpic/newpic/9010969.jpg_220x240.jpg" alt="">
+                                    </div>
+                                    <div class="det-inner-li-div-d2">
+                                        <p>你最珍贵</p>
+                                        <p>￥239</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="det-inner-li">
+                            <a href="#">
+                                <div class="det-inner-li-div">
+                                    <div class="det-inner-li-div-d1">
+                                        <img src="./img01.hua.com/uploadpic/newpic/9010949.jpg_220x240.jpg" alt="">
+                                    </div>
+                                    <div class="det-inner-li-div-d2">
+                                        <p>恰似你的温柔</p>
+                                        <p>￥206</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="det-inner-li">
+                            <a href="#">
+                                <div class="det-inner-li-div">
+                                    <div class="det-inner-li-div-d1">
+                                        <img src="./img01.hua.com/uploadpic/newpic/9092116.jpg_220x240.jpg" alt="">
+                                    </div>
+                                    <div class="det-inner-li-div-d2">
+                                        <p>恋恋情深+心相印蛋糕</p>
+                                        <p>￥319</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="det-inner-li">
+                            <a href="#">
+                                <div class="det-inner-li-div">
+                                    <div class="det-inner-li-div-d1">
+                                        <img src="./img01.hua.com/uploadpic/newpic/9012056.jpg_220x240.jpg" alt="">
+                                    </div>
+                                    <div class="det-inner-li-div-d2">
+                                        <p>香妃</p>
+                                        <p>￥132</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="det-inner-li">
+                            <a href="#">
+                                <div class="det-inner-li-div">
+                                    <div class="det-inner-li-div-d1">
+                                        <img src="./img01.hua.com/uploadpic/newpic/9012141.jpg_220x240.jpg" alt="">
+                                    </div>
+                                    <div class="det-inner-li-div-d2">
+                                        <p>柔情似水</p>
+                                        <p>￥158</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="det-inner-li">
+                            <a href="#">
+                                <div class="det-inner-li-div">
+                                    <div class="det-inner-li-div-d1">
+                                        <img src="./img01.hua.com/uploadpic/newpic/9012240.jpg_220x240.jpg" alt="">
+                                    </div>
+                                    <div class="det-inner-li-div-d2">
+                                        <p>天天天晴</p>
+                                        <p>￥469</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="detail-r">
+            <div class="detail-r-d1" style="
+            border-left: none;">
+                <div class="detail-r-d1-d">
+                    <ul style="list-style: none;">
+                        <li style="border: 0;" class="detail-li1">
+                            <a href="#">
+                                商品详情
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="a2">
+                                用户评价
+                                (<span style="color: #ff734c;">2251</span>)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="a3">
+                                购物保障
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="toTop">
+                <div class="detail-r-d1-d" style="display: flex;justify-content: space-between;">
+                  <ul style="list-style: none;border: 1px solid #E9ECF0">
+                      <li style="border: 0;" class="detail-li1">
+                          <a href="#" id="a1">
+                              商品详情
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" >
+                              用户评价
+                              (<span style="color: #ff734c;">2251</span>)
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" >
+                              购物保障
+                          </a>
+                      </li>
+                  </ul>
+                  <div class="fixed-group">
+                      <span>￥</span>
+                      <span>196</span>
+                      <div class="fixed-btn">
+                          <a href="#">立即购买</a>
+                        </div>
+                  </div>
+              </div>
+              </div>
+            <div class="detail-r-d2">
+                <div class="detail-r-d2-d1" style="display: inline-block;">
+                    <p>产品参数</p>
+                </div>
+                <div class="detail-r-d2-d2">
+                    <div class="detail-r-d2-d2-d">
+                        <p>编号</p>
+                        <p> 9012243</p>
+                    </div>
+                    <div class="detail-r-d2-d2-d">
+                        <p>类别</p>
+                        <p>鲜花</p>
+                    </div>
+                    <div class="detail-r-d2-d2-d">
+                        <p>包装</p>
+                        <p> 深浅绿双面人造纸2张，米白色缎带1.5米</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-r-d3">
+                <div class="detail-r-d3-d">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191235347.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191236172.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170828115945157.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/by_20180703184222909.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191237431.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191238377.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191238939.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191239839.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191240210.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191241840.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20171220163103677.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191243417.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/20170822191244417.jpg" alt="">
+                    <img src="./img01.hua.com/uploadpic/newpic/xianhua_cardstyle.jpg" alt="">
+                </div>
+                <div class="detail-r-d3-d2">
+                    <div class="detail-r-d3-d2-d1">
+                        <p>龙头企业认证·15年品牌</p>
+                        <p>始于2005，多次获中国电子商务协会“鲜花龙头企业”认证。</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_01.png" alt="">
+                    </div>
+                    <div class="detail-r-d3-d2-d1">
+                        <p>12道品控标准 + 送前实拍</p>
+                        <p>行业内率先研发并实施12道严苛品控标准：从花材采购、制作、成品、配送、售后全程覆盖，将产品及服务标准化；每束花均实拍回传总部审核，符合品控标准方可送出。</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_02.png" alt="">
+                    </div>
+                    <div class="detail-r-d3-d2-d1">
+                        <p>花艺设计团队</p>
+                        <p>国内领先的原创花艺：中国花艺博览会赛事冠军花艺师打造团队，坚持原创设计，创作花款迄今已畅销千万束。</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_03.png" alt="">
+                    </div>
+                    <div class="detail-r-d3-d2-d1">
+                        <p>当日新鲜花材制作，极速送达</p>
+                        <p>门店覆盖全国2000+城市，鲜花皆由当地门店花艺师在配送当日使用新鲜A级花材制作，确保鲜花娇艳欲滴！并由专人专车送货上门，最快1小时送达，快人一步！</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_04.png" alt="">
+                    </div>
+                    <div class="detail-r-d3-d2-d1">
+                        <p>客服团队</p>
+                        <p>建设一支较其他电商更大规模的客服团队，将常规客服升级为售前订花顾问、售中专人跟单、售后快速响应的一站式管家客服模式。</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_05.png" alt="">
+                    </div>
+                    <div class="detail-r-d3-d2-d1">
+                        <p>优秀平台汇聚优秀人才</p>
+                        <p>我们相信优秀的平台环境可以吸引同样气质、热爱花礼行业的优秀人才。</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_06.png" alt="">
+                    </div>
+                    <div class="detail-r-d3-d2-d1">
+                        <p>不只鲜花 · 跨界音乐微电影</p>
+                        <p>联合GIMC打造“勇敢爱”系列原创微电影、赞助《不要音乐》大型音乐旅行节目，全网播放超5000万次。</p>
+                        <img src="./img01.hua.com/uploadpic/newpic/m_details_point_07.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-r"  style="margin-top: 20px;">
+            <div class="detail-r-d1" style="
+            border-left: none;">
+                <div class="detail-r-d1-d">
+                    <ul style="list-style: none;">
+                        <li style="border: 0;">
+                            <a href="#">
+                                商品详情
+                            </a>
+                        </li>
+                        <li class="detail-li2">
+                            <a href="#">
+                                用户评价
+                                (<span style="color: #ff734c;">2251</span>)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                购物保障
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="toTop2">
+                <div class="detail-r-d1-d" style="display: flex;justify-content: space-between;">
+                    <ul style="list-style: none;">
+                        <li style="border: 0;">
+                            <a href="#">
+                                商品详情
+                            </a>
+                        </li>
+                        <li class="detail-li2">
+                            <a href="#">
+                                用户评价
+                                (<span style="color: #ff734c;">2251</span>)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                购物保障
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="fixed-group">
+                        <span>￥</span>
+                        <span>196</span>
+                        <div class="fixed-btn">
+                            <a href="#">立即购买</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-r2-d1">
+                <div class="detail-r2-d1-d1">
+                    <a href="#" class="detail-r2-d1-d1-d1">
+                        只看当前商品评价( <span class="detail-r2-d1-d1-d1-span">2252</span> )
+                    </a>
+                    <a href="# " class="detail-r2-d1-d1-d1">
+                        查看所有商品评价( <span class="detail-r2-d1-d1-d1-span">3789981<span> )
+                    </a>
+                </div>
+                <div class="detail-r2-d1-d2">  
+                    <div class="detail-r2-d1-d2-d">
+                        <div class="det-r2-d1-d2-d-d1">
+                            <img src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ6sQqibnzszNy9o3xnvWvwhhQ0Zs7pAIGNmd7SxuDMMnMzKCx31l0iaR9KIJicHQhgKcPzxJD9POlSg/132" alt="">
+                            <p>小*娘</p>
+                        </div>
+                        <div class="det-r2-d1-d2-d-d2">
+                            <p>
+                                <span></span>
+                            </p>
+                            <p>
+                                漂亮挺好看的，送女友生日
+                            </p>
+                            <div class="det-r2-d1-d2-d-d2-d">
+                                <img src="./img.hua.com/reviewpic/app/2020/07/07/e3c162c32ea942259b6c884abb844982.jpeg" alt="">
+                            </div>
+                            <p>
+                                广东深圳市龙华区 2020-07-07
+                            </p>
+                        </div>
+                    </div>
+                    <div class="detail-r2-d1-d2-d">
+                        <div class="det-r2-d1-d2-d-d1">
+                            <img src="https://thirdwx.qlogo.cn/mmopen/vi_32/ebj4ehFYFYfRgqBZ8aB2B1SgBW2s754lVic8u3vGPW2Wr696aTJfIibrYK2POiciagjwfbzoCdZpEm1V9hGUQQAfvw/132" alt="">
+                            <p>李*杰</p>
+                        </div>
+                        <div class="det-r2-d1-d2-d-d2">
+                            <p>
+                                <span></span>
+                            </p>
+                            <p>
+                                漂亮挺好看的，送女友生日
+                            </p>
+                            <div class="det-r2-d1-d2-d-d2-d">
+                                <img src="./img.hua.com/reviewpic/app/2020/07/07/e3c162c32ea942259b6c884abb844982.jpeg" alt="">
+                            </div>
+                            <p>
+                                广东深圳市龙岗区 2020-05-21
+                            </p>
+                        </div>
+                    </div>
+                    <div class="detail-r2-d1-d2-d">
+                        <div class="det-r2-d1-d2-d-d1">
+                            <img src="https://img02.hua.com/pc/assets/img/avatar_default_08.jpg" alt="">
+                            <p>王*生</p>
+                        </div>
+                        <div class="det-r2-d1-d2-d-d2">
+                            <p>
+                                <span></span>
+                            </p>
+                            <p>
+                                漂亮挺好看的，送女友生日
+                            </p>
+                            <div class="det-r2-d1-d2-d-d2-d">
+                                <img src="./img.hua.com/reviewpic/app/2020/07/07/e3c162c32ea942259b6c884abb844982.jpeg" alt="">
+                            </div>
+                            <p>
+                                广东深圳市龙华区 2020-07-07
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-r"  style="margin-top: 20px;">
+            <div class="detail-r-d1" style="
+            border-left: none;">
+                <div class="detail-r-d1-d">
+                    <ul style="list-style: none;">
+                        <li style="border: 0;">
+                            <a href="#">
+                                商品详情
+                            </a>
+                        </li>
+                        <li >
+                            <a href="#">
+                                用户评价
+                                (<span style="color: #ff734c;">2251</span>)
+                            </a>
+                        </li>
+                        <li class="detail-li3" style="border-right: 1px solid #e9ecf0;">
+                            <a href="#">
+                                购物保障
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detail-r-d0" id="detail-r-d0">
+                <div class="det-r-d2-d1">
+                    <ul>
+                        <li class="det-r-d2-d1-li">
+                            <a href="#">
+                                <span class="det-r-d2-d1-p11 det-r-d2-d1-p1" ></span>
+                                <p>15年品牌</p>
+                            </a>
+                        </li>
+                        <li class="det-r-d2-d1-li">
+                            <a href="#">
+                                <span class="det-r-d2-d1-p2" ></span>
+                                <p>销量领先</p>
+                            </a>
+                        </li>
+                        <li class="det-r-d2-d1-li">
+                            <a href="#">
+                                <span class="det-r-d2-d1-p3" ></span>
+                                <p>百万客户信赖</p>
+                            </a>
+                        </li>
+                        <li class="det-r-d2-d1-li">
+                            <a href="#">
+                                <span class="det-r-d2-d1-p4" ></span>
+                                <p>订单实拍</p>
+                            </a>
+                        </li>
+                        <li class="det-r-d2-d1-li">
+                            <a href="#">
+                                <span class="det-r-d2-d1-p5" ></span>
+                                <p>3小时配送</p>
+                            </a>
+                        </li>
+                        <li class="det-r-d2-d1-li">
+                            <a href="#">
+                                <span class="det-r-d2-d1-p6" ></span>
+                                <p>200%退赔承诺</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detail-r-d0-d1" id="detail-r-d0-d1">
+                    <div class="displayInline" id="">
+                        <img src="./img02.hua.com/pc/pimg/server_01.jpg" alt="">
+                    </div>
+                    <div class="" id="">
+                        <img src="./img02.hua.com/pc/pimg/server_02.jpg" alt="">
+                    </div>
+                    <div class="" id="">
+                        <img src="./img02.hua.com/pc/pimg/server_03.jpg" alt="">
+                    </div>
+                    <div class="" id="">
+                        <img src="./img02.hua.com/pc/pimg/server_04.jpg" alt="">
+                    </div>
+                    <div class="" id="">
+                        <img src="./img02.hua.com/pc/pimg/server_05.jpg" alt="">
+                    </div>
+                    <div class="" id="">
+                        <img src="./img02.hua.com/pc/pimg/server_06.jpg" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <!-- 商品详情end -->
+    <div class="likeShouyeFooter">
+        <div id="footer">
+            <div class="footer-d1">
+                <!-- 尾部导航 -->
+                <div class="footer-d1-div">
+                    <ul class="footer-breadcrumb">
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">首页</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">关于我们</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">媒体报道</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">联系方式</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">企业团购</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">花店入驻</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">友情链接</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">在线补款</a>
+                        </li>
+                        <li class="footer-breadcrumb-item">
+                            <a href="#">为什么选择中国鲜花礼品网</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 尾部证书 -->
+                <div class="certificate">
+                    <div class="certificate-div">
+                        <p>
+                            <a href="#">中国花卉协会会员</a>
+                            <a href="#">中国电子商务协会会员</a>
+                            <span>ICP经营许可证: </span>
+                            <a href="#">粤B2-20050744</a>
+                            <a href="#">粤ICP备09171662号</a>
+                            <span class="certificate-div-p-span1"></span>
+                            <span>
+                                粤公网安备44030502000373号 Copyright &copy; 2005-2020
+                            </span>
+                        </p>
+                        <p>
+                            <span>花礼网 (中国鲜花礼品)</span>
+                            <a href="#">www.hua.com</a>
+                            <span>
+                                深圳市百易信息技术有限公司 中国鲜花网领先品牌，鲜花速递专家！
+                            </span>
+                        </p>
+                    </div>
+                    <div class="certificate-image">
+                        <span></span>
+                        <a href="#">
+                            <span></span>
+                        </a>
+                        <a href="#">
+                            <span></span>
+                        </a>
+                        <div class="certificate-image-div">
+                            <a href="#">
+                                <img src="https://szcert.ebs.org.cn/Images/govIcon.gif" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 友情链接 -->
+                <div class="friend-link">
+                    <p class="friend-link-p">
+                        <span>友链 </span>
+                        <a href="#">中华取名网 </a>
+                        <a href="#">深圳房产网 </a>
+                        <a href="#">卷皮网 </a>
+                        <a href="#">腕表 </a>
+                        <a href="#">苗木 </a>
+                        <a href="#">佐卡伊珠宝网 </a>
+                        <a href="#">钻石婚戒定制 </a>
+                        <a href="#">中国青少年艺术教育网 </a>
+                        <a href="#">淘狗网 </a>
+                        <a href="#">礼无忧网 </a>
+                        <a href="#">宠物狗 </a>
+                        <a href="#">机友网 </a>
+                        <a href="#">礼物网 </a>
+                        <a href="#">新三板 </a>
+                        <a href="#">商标注册 </a>
+                        <a href="#">眼镜店 </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/xiangqingye.js"></script>
+</body>
+</html>
